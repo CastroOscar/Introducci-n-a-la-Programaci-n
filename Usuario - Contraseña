@@ -1,0 +1,50 @@
+/*----------------------------------
+FCA UNAM Informaatica
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 3 Actividad de aprendizaje 4.
+-----------------------------------
+         Usuario contraseña
+----------------------------------*/
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+const char contr[20]="Notevoyadecir";
+ 
+int main(void){
+char usuario[20],nom[20];
+int c,i;
+
+    i=3;c=0;
+    
+    printf("\t-------------------------\n"
+	         "\t   INGRESO AL SISTEMA    \n"
+	         "\t-------------------------\n");
+	       
+    printf("\nIntroduzca nombre de usuario: ");
+    gets(nom);
+    printf("Introduzca la contrasena: ");
+    gets(usuario); printf("\n");
+    if (strcmp(usuario,contr)==0)
+    c=1;
+    while ((c==0)&&(i>1)&&(i--))
+    {
+          
+        printf("Contrasena incorrecta!\n"); 
+        printf("Intentos restantes: %i", i); 
+        printf("\nIntroduzca nuevamente la contrasena: ");
+        gets(usuario); printf("\n");
+        
+        if (strcmp(usuario,contr)==0) 
+        c=1;
+    }
+    if (c==0) 
+    printf("Se han excedido el numero de intentos.\nUsuario %s no autorizado!\n",nom);
+    else
+        {
+            printf("Acceso concedido\nBienvenido/a %s!\n",nom);
+            
+        }
+    return 0;
+}
