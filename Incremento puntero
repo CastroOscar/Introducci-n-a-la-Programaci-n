@@ -1,0 +1,35 @@
+/*----------------------------------
+FCA UNAM Informatica
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 6 Actividad de aprendizaje 1
+------------------------------------
+    Incremento de un apuntador
+----------------------------------*/
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int valor = 3;
+    int *ptr;
+    
+ 
+ cout<<"\tINCREMENTO DE APUNTADORES"<<endl<<endl;
+ 
+    ptr = &valor; 
+ 
+    for(int i=0; i< 5; i++)
+    {
+        cout<<*(ptr)<<endl; 
+        cout<<"Posicion: "<<int(*ptr+i)<<endl;
+	}
+   
+   return 0;
+}
+/*--------------------------------------------------
+Referencia: Blogspot. Aprende Lenguaje C. Apuntadores. 
+https://alcprogramacion.blogspot.com/p/punteros.html
+--------------------------------------------------*/
