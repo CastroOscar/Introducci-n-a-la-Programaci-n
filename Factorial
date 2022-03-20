@@ -1,0 +1,39 @@
+/*-----------------------------------
+FCA UNAM Informatica
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 4 Actividad de aprendizaje 7.
+------------------------------------
+            Factorial
+-----------------------------------*/
+
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    int i,x;
+    long fact;
+    char resp;  
+        
+        printf("ESTE PROGRAMA CALCULA EL FACTORIAL DE UN NUMERO\n");
+        do
+    {
+    	fact= 1;
+        printf("\nIntroduce un numero: ");
+        scanf("%d",&x);
+        for(i=x; i>1; i--)
+            fact = fact *i;
+        printf("El factorial de %d = %1d\n",x,fact);
+        printf("\nDeseas realizar otro calculo? S/N: ");
+        scanf("%s",&resp);
+    }
+    while((resp == 'S')||(resp == 's'));
+    
+    return 0;
+}
+/*------------------------------------------------------------------------------------------
+Referencia: Ma. Adriana Corona Nakamura, Ma. de los Ángeles Ancona Valdez. (2011). 
+Diseño de algoritmos y su codificación en lenguaje C. McGraw- HILL. Ciudad de México.
+--------------------------------------------------------------------------------------------
