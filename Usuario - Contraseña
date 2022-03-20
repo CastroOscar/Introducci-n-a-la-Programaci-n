@@ -48,3 +48,10 @@ int c,i;
         }
     return 0;
 }
+/*------------------------------------------------------------------------------------------
+Referencias: Ma. Adriana Corona Nakamura, Ma. de los Ángeles Ancona Valdez. (2011). 
+Diseño de algoritmos y su codificación en lenguaje C. McGraw- HILL. Ciudad de México.
+--------------------------------------------------------------------------------------------
+Andres.(2016). Dev C++ (Ayuda) Programa Password "Cadenas". La web del programador.
+https://www.lawebdelprogramador.com/foros/Dev-C/1564067-Ayuda-Programa-Password-Cadenas.html
+--------------------------------------------------------------------------------------------*/
