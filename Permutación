@@ -1,0 +1,38 @@
+/*----------------------------------
+FCA UNAM Informatica
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 4 Actividad de aprendizaje 5.
+-----------------------------------
+Cambio de posicion de elementos
+----------------------------------*/
+
+#include <algorithm>
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+	char opc;
+  std::string cadena ;
+  
+  cout<<"PERMUTACION DE CADENAS";cout<<endl;
+  cout<<endl;
+  do{  
+  	cout<<"Ingresa una cadena: ";
+	  cin>>cadena;cout<<endl; 
+  do
+  {
+    std::cout << cadena << std::endl;
+  } while ( std::next_permutation( cadena.begin( ), cadena.end( ) ) );
+  cout<<endl;
+  cout<<"Deseas ingresar otra cadena S/N: ";cin>>opc;cout<<endl;
+}
+while((opc == 'S')||(opc == 's'));
+}
+/*------------------------------------------------------------------------
+Referencia: Eferion.(2015). Permutaciones en C++. 
+https://foro.elhacker.net/programacion_cc/permutaciones_en_ct429978.0.html
+-------------------------------------------------------------------------*/
