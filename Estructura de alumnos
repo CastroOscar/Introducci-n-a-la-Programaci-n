@@ -1,0 +1,70 @@
+/*----------------------------------
+FCA UNAM Informatica
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 5 Actividad de aprendizaje 6
+------------------------------------
+       Estructura de alumnos
+-----------------------------------*/
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+struct info{
+    char nom[30],lic[20];
+    int  sem;
+    long cue;
+    float prom;
+};
+
+typedef info info_est;
+
+main() {
+    info_est est[10];
+    int tot_est,i;
+    char opc;
+    printf("\t-----------------------\n"
+	         "\t  REGISTRO Y CONSULTA  \n"
+		       "\t       DE DATOS        \n"
+	         "\t-----------------------\n");
+	       
+    printf("\nTotal de alumnos MAX 10: ");
+    scanf("%d",&tot_est);
+    
+    for(i=1; i<=tot_est; i++) {
+    	printf("\nEstudiante %d",i);
+        printf("\nNombre: ");
+        fflush(stdin);
+        gets(est[i].nom);
+        printf("Numero de cuenta: ");
+        fflush(stdin);
+        scanf("%d",&est[i].cue);
+        printf("Licenciatura: ");
+        fflush(stdin);
+        gets(est[i].lic);
+        printf("Semestre en curso: ");
+        scanf("%d",&est[i].sem);
+        printf("Promedio actual: ");
+        scanf("%f",&est[i].prom);
+    }do{
+    
+    printf("\nDe que estudiante quieres los datos: ");
+    scanf("%d",&i);printf("\n");
+    printf("%s\n",est[i].nom);
+    printf("%d\n",est[i].cue);
+    printf("%s\n",est[i].lic);
+    printf("%d Semestre\n",est[i].sem);
+    printf("Promedio de %1.2f\n",est[i].prom);
+    
+    printf("\nDeseas consultar otro estudiante? S/N: ");
+    scanf("%s",&opc);
+}
+   while ((opc=='S')||(opc=='s'));
+    getchar();
+    return 0;
+}
+/*-----------------------------------------------------------------------------------
+Referencia: Ma. Adriana Corona Nakamura, Ma. de los Ángeles Ancona Valdez. (2011). 
+Diseño de algoritmos y su codificación en lenguaje C. McGraw- HILL. Ciudad de México.
+------------------------------------------------------------------------------------*/
