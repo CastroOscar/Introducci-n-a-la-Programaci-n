@@ -1,0 +1,72 @@
+/*-----------------------------------
+FCA UNAM Informatica 
+Castro Avila Oscar Daniel Grupo:8292
+Introduccion a la programacion-1167
+Asesor: Rodriguez Reynoso Jessica
+Unidad 3 Actividad de aprendizaje 2.
+------------------------------------
+         Interes simple
+-----------------------------------*/
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+
+char resp;
+    int monto,t,opc,p;
+    float ti, itrs,impt, pago;
+
+    printf("\t---------------------------\n"
+	       "\tPRESTAMO CON INTERES SIMPLE\n"
+	       "\t---------------------------\n"); 
+    do {
+    
+    printf("\nIngresa el monto del prestamo: $");
+    scanf("%d",&monto);
+    printf("Ingresa el porcentaje de la tasa de interes anual: ");
+    scanf("%f",&ti);
+    printf("\nIndique el periodo de pagos\n");
+    printf("\nMensual - 1");
+    printf("\nBimestral - 2");
+    printf("\nTrimestral - 3");
+    printf("\nCuatrimestral - 4");
+    printf("\nSemestral - 5\n");
+    do
+    {
+        printf("\nDigite la opcion: ");
+        scanf("%d",&opc);
+
+        if(opc ==1)
+            p=12;
+        else if(opc==2)
+            p=6;
+        else if(opc==3)
+            p=4;
+        else if(opc==4)
+            p=3;
+        else if(opc==5)
+            p=2;
+        else if((opc<1) || (opc>5))
+            printf("\nDigita una opcion valida!\n");
+    }
+    while((opc<1)||(opc>5));
+
+    printf("Cuantos pagos realizara: ");
+    scanf("%d",&t);
+
+    ti=(ti/p)/100;
+    impt=monto*(1+ti*t);
+    pago=impt/t;
+    itrs=monto*ti*t;
+
+    printf("\nEl importe total a pagar es de :$%.2f",impt);
+    printf("\nEl interes generado es de :$%.2f",itrs);
+    printf("\nLos pagos seran de: $%.2f\n",pago);
+    printf("\nDeseas realizar otro calculo? S/N: ");
+    scanf("%s",&resp);
+    }
+    while((resp == 'S')||(resp == 's'));
+    return 0;
+    getchar();
+}
